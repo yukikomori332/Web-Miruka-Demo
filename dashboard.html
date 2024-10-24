@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Webミルカ</title>
+    <meta name="description" content="ページの閲覧回数を記録するChrome拡張機能です。" />
+
+    <!-- <meta name="robots" content="index,follow" /> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="icons/favicon.ico" />    
+  </head>
+  <body>
+    <div class="container">
+        <div id="bubble_area" class="character-container">
+            <img id="character_image" src="images/character.gif">
+        </div>
+
+        <div class="stats-header"></div>
+        <div class="stats-content">
+            <div class="auto-container">
+                <div class="stats-title">
+                    <h1 class="text">計</h1>
+                    <p id="totalValue" class="value">1,000</p>
+                    <p class="subtext">閲覧</p>
+                </div>
+                
+                <div class="stats-btns">
+                    <button class="btn active" data-period="daily">日</button>
+                    <button class="btn" data-period="weekly">週</button>
+                    <button class="btn" data-period="monthly">月</button>
+                </div>
+
+                <div id="chart-container">
+                    <canvas id="chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <script src="dashboard.js"></script>
+  </body>
+</html>
